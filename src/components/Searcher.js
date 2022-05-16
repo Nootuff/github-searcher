@@ -14,6 +14,8 @@ import Paper from '@mui/material/Paper'
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import '../styles/SearchForm.css';*/
+import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 
 function Searcher() {
   const [values, /* searchTermHolder,*/ handleChange] = useInputState();
@@ -21,7 +23,7 @@ function Searcher() {
   const [result, handleSubmit] = useSearch();
   return (
     <div>
-      Searcher
+    <Typography variant="h4" sx={{ mt: 4 }} >GitHub User Searcher</Typography>
 
       <SearchForm 
       values={values}
@@ -35,7 +37,9 @@ function Searcher() {
 result = {result}
  />
 
-
+<Typography variant="h6">
+             <Link href="https://github.com/Nootuff/github-searcher" target="_blank" rel="noopener">View site code on GitHub</Link>
+                </Typography>
     </div>
   )
 }

@@ -31,7 +31,7 @@ if (values.searchTerm !== ""){
   return axios.request(options).then(function (response) { //Response is the argument to hold the actual returned results from the axios.request.
     setResult(response.data); //The results of the axios reqeust is set to state.
     //setSearchTags({ searchedTerm: valuesParam.searchTerm, searchedBy: valuesParam.searchBy }); //The search term and search by are saved to the searchTags to be used in the result message. 
-    console.log(result)
+    console.log(response.data)
     
 }).catch(function (error){
     console.error(error);

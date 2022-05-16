@@ -10,23 +10,29 @@ import Typography from '@mui/material/Typography';
 import '../styles/SearchForm.css'; */
 import Paper from '@mui/material/Paper'
 import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 
 function SearchForm({ values, handleChange, result, handleSubmit }) {
   return (
     <Paper>
     <form>
-      <input
+      <TextField
+      sx={{ my: 2 }} 
         type="text"
         id="search-input"
         value={values.searchTerm}
         onChange={handleChange}
         name="searchTerm"
+        variant="outlined"
+        label="Enter GitHub User"
+        required
       >
 
-      </input>
+      </TextField>
       <br />
       <Button 
+      
          variant={(values.searchTerm === "" ) ? "disabled" : "contained"/*If no searchTerm has been entered or searchBy selected, button is disabled.*/}
            onClick={(event) => {
             event.preventDefault();

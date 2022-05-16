@@ -7,28 +7,50 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Paper from '@mui/material/Paper'
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+
 import '../styles/SearchForm.css'; */
+import Card from "@mui/material/Card";
+import CardHeader from "@mui/material/CardHeader";
+import CardMedia from "@mui/material/CardMedia";
+import CardContent from "@mui/material/CardContent";
+import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 
-
-function ResultCard({result/* values, handleChange, result, handleSubmit */}) {
+function ResultCard({ result/* values, handleChange, result, handleSubmit */ }) {
   return (
-<div>
+    <Card
+    className="Result-card"
+    raised
+     sx={{ width: '50%' }} align="center" >
+
+      <CardContent align="left">
+        {result ?
+          <div>
+            <CardMedia
+            sx={{ width: 1/4 }}
+            component="img"
+            image={result.avatar_url}
+            alt="Profile image here"
+            ></CardMedia>
+             <Typography variant="h4">
+             <Link href={result.html_url} target="_blank" rel="noopener">{result.login}</Link>
+                </Typography>
+            <Typography paragraph ><b>ID: </b>{result.id}</Typography>
+            <Typography paragraph ><b>Location: </b>{result.location}</Typography>
+           {/* <Typography paragraph ><b>Followers: </b>{result.followers_url.length}</Typography>    
+            <Typography paragraph ><b>Following: </b>{result.following_url.length}</Typography>    If you can't get it working abandon this part */}
+            <Typography paragraph><b>Bio: </b>{result.bio}</Typography>
 
 
-{result ? 
-<div>
-<h1>{result.login}</h1>
-<h5>{result.bio}</h5>
-</div>
-:
-"Sorry nothing found"
+          </div>
+          :
+          <Typography paragraph>Sorry nothing found</Typography>
+        }
+      </CardContent>
+    </Card>
+  )
 }
 
-</div>
-    )
-  }
-  
-  export default ResultCard;
+export default ResultCard;
 
 
