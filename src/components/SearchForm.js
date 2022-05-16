@@ -4,14 +4,17 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import Paper from '@mui/material/Paper'
-import Button from '@mui/material/Button';
+
+
 import Typography from '@mui/material/Typography';
 import '../styles/SearchForm.css'; */
+import Paper from '@mui/material/Paper'
+import Button from '@mui/material/Button';
 
 
 function SearchForm({ values, handleChange, result, handleSubmit }) {
   return (
+    <Paper>
     <form>
       <input
         type="text"
@@ -23,15 +26,17 @@ function SearchForm({ values, handleChange, result, handleSubmit }) {
 
       </input>
       <br />
-      <button 
+      <Button 
+         variant={(values.searchTerm === "" ) ? "disabled" : "contained"/*If no searchTerm has been entered or searchBy selected, button is disabled.*/}
            onClick={(event) => {
             event.preventDefault();
             handleSubmit(values /* props.searchByHolder, props.searchTermHolder*/);
            }}
       >
-        Saerch by username
-      </button>
+        Search by username
+      </Button>
     </form>
+    </Paper>
   )
 }
 

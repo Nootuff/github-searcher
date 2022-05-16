@@ -17,22 +17,15 @@ function ResultCard({result/* values, handleChange, result, handleSubmit */}) {
 
 
 {result ? 
-
 <div>
 <h1>{result.login}</h1>
 <h5>{result.bio}</h5>
 </div>
-
 :
-
 "Sorry nothing found"
 }
 
-
-
-
 </div>
-
     )
   }
   

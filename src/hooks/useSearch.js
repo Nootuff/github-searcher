@@ -35,6 +35,8 @@ if (values.searchTerm !== ""){
     
 }).catch(function (error){
     console.error(error);
+    setResult("");
+    //alert("error occurred")
 });
 
 }
