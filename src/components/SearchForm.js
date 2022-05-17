@@ -1,22 +1,17 @@
 import React from "react";
-/*import TextField from '@mui/material/TextField';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-
-
-import Typography from '@mui/material/Typography';
-import '../styles/SearchForm.css'; */
 import Paper from '@mui/material/Paper'
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
+import { grey } from '@mui/material/colors';
+
+const border = grey[700];
 
 
 function SearchForm({ values, handleChange,  handleSubmit }) {
   return (
-    <Paper sx={{ p: 3 }} >
-    <form>
+    <Paper sx={{ p: 3, border: 4, borderColor: border }} >
+    <FormControl>
       <TextField
       sx={{ my: 2 }} 
         type="text"
@@ -41,7 +36,7 @@ function SearchForm({ values, handleChange,  handleSubmit }) {
       >
         Search by username
       </Button>
-    </form>
+    </FormControl>
     </Paper>
   )
 }

@@ -1,8 +1,5 @@
-#Result-card{
-  border: 7px solid var(--lighter-grey);;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+#Result-card {
   margin: 17px auto;
   width: 50%;
+  color: var(--github-grey)
 }

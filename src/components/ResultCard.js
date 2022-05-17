@@ -20,56 +20,57 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import '../styles/ResultCard.css';
 import "../styles/index.css";
+import { grey } from '@mui/material/colors';
+
+const border = grey[700];
 
 function ResultCard({ user, repos/* values, handleChange, result, handleSubmit */ }) {
 
   const repoList = repos.map((repo) =>
-  <RepoCard
-  key={repo.id}
-   repo={repo}
-
-   />
-/*<li>{repo.name}</li>*/
- );
+    <RepoCard
+      key={repo.id}
+      repo={repo}
+    />
+  );
 
   return (
     <Card
-    id="Result-card"
-    raised
+      id="Result-card"
+      raised
+      sx={{ p: 3, border: 4, borderColor: border }}
     >
-
       <CardContent align="left">
-        
-           
-            <CardMedia
-            sx={{ width: 2/4 }}
-            component="img"
-            image={user.avatar_url}
-            alt="Profile image here"
-            ></CardMedia>
-             <Typography variant="h4">
-             <Link href={user.html_url} target="_blank" rel="noopener">{user.login}</Link>
-                </Typography>
-                
-             <Typography paragraph ><b>ID: </b>{user.id}</Typography>
-             {user.location && <Typography paragraph ><b>Location: </b>{user.location}</Typography> }
-             {user.twitter_username && <Typography paragraph>
-             <Link href={`https://twitter.com/${user.twitter_username}`} underline="hover" target="_blank" rel="noopener">Twitter</Link> 
-                </Typography> }
-           {/* <Typography paragraph ><b>Followers: </b>{result.followers_url.length}</Typography>    
-            <Typography paragraph ><b>Following: </b>{result.following_url.length}</Typography>    If you can't get it working abandon this part */}
-            {user.bio && <Typography paragraph><b>Bio: </b>{user.bio}</Typography> }
 
-            {repos.length && <Typography paragraph><b>Repos: </b></Typography> }
- 
-{repoList}
- 
+        <CardMedia
+          sx={{ width: 2 / 4 }}
+          component="img"
+          image={user.avatar_url}
+          alt="Profile image here"
+        ></CardMedia>
+        <Typography variant="h4">
+          <Link href={user.html_url} target="_blank" rel="noopener">{user.login}</Link>
+        </Typography>
 
-            {/* <Typography paragraph ><b>Location: </b>{result.repos_url}</Typography> */}
-          
-         {/* :
-          <Typography paragraph>Sorry nothing found</Typography>
-        } */}
+        <Typography paragraph ><b>Profile ID: </b>{user.id}</Typography>
+
+        {user.name && <Typography paragraph ><b>Name: </b>{user.name}</Typography>}
+
+        {user.location && <Typography paragraph ><b>Location: </b>{user.location}</Typography>}
+
+        {user.twitter_username && <Typography paragraph>
+          <Link href={`https://twitter.com/${user.twitter_username}`} underline="hover" target="_blank" rel="noopener">Twitter</Link>
+        </Typography>}
+
+        {user.blog && <Typography paragraph>
+          <Link href={user.blog} underline="hover" target="_blank" rel="noopener">Personal site</Link>
+        </Typography>}
+
+        {user.bio && <Typography paragraph><b>Bio: </b>{user.bio}</Typography>}
+
+        {repos.length && <Typography paragraph><b>Code Repos: </b></Typography>}
+
+        {repoList}
+
       </CardContent>
     </Card>
   )
