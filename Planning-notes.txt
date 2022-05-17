@@ -10,6 +10,7 @@ Handle errors or users not found by displaying a suitable message.
 *	Error message if nothing found. If possible make the error message a component. DONE
 * 	If no data is there, don't make header render
 *	Result card should have a list of their repos, functioning urls 
+*	Have a link to theri twitter, uyse string template interpolation. 
 • 	
 •	Can you get a live demo working on netlify? DONE
 

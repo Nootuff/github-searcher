@@ -8,6 +8,7 @@ const initialSearchTags = {
 
 export default search => {
     const [result, setResult] = useState("");
+    const [searched, setSearched] = useState(false);
     //const [searchTags, setSearchTags] = useState(initialSearchTags);
    // const [show, setShow] = useState(false);
     //const [loading, setLoading] = useState(false);
@@ -25,6 +26,8 @@ export default search => {
 //alert("Activate search")
 //setResult("Testing does this worK? ")
 console.log(values.searchTerm)
+
+setSearched(true)
 
 if (values.searchTerm !== ""){
 
@@ -59,5 +62,5 @@ if (values.searchTerm !== ""){
         */
     }
 
-    return [result, /* searchTags, */   handleSubmit ];
+    return [result, searched, /* searchTags, */   handleSubmit ];
 }

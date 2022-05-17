@@ -1,6 +1,7 @@
 import React from "react";
 import SearchForm from "./SearchForm";
-import ResultCard from "./ResultCard";    
+
+import ResultField from "./ResultField"; 
 import useSearch from "../hooks/useSearch";
 import useInputState from "../hooks/useInputState";
 
@@ -20,7 +21,7 @@ import Link from '@mui/material/Link';
 function Searcher() {
   const [values, /* searchTermHolder,*/ handleChange] = useInputState();
 
-  const [result, handleSubmit] = useSearch();
+  const [result, searched, handleSubmit] = useSearch();
   return (
     <div>
     <Typography variant="h4" sx={{ mt: 4 }} >GitHub User Searcher</Typography>
@@ -32,10 +33,14 @@ function Searcher() {
       handleSubmit = {handleSubmit}
       />
 
+{searched && <p>Searched once</p> }
 
-<ResultCard
+<ResultField 
 result = {result}
- />
+/>
+{/*<ResultCard
+result = {result}
+  />*/}
 
 <Typography variant="h6">
              <Link href="https://github.com/Nootuff/github-searcher" target="_blank" rel="noopener">View site code on GitHub</Link>

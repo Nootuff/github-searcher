@@ -35,6 +35,9 @@ function ResultCard({ result/* values, handleChange, result, handleSubmit */ }) 
              <Typography variant="h4">
              <Link href={result.html_url} target="_blank" rel="noopener">{result.login}</Link>
                 </Typography>
+                <Typography variant="h4">
+             {/*<Link href={result.html_url} target="_blank" rel="noopener">Twitter</Link> USE STRING TEMPLATES TO GET TWITTER WORKING */}
+                </Typography>
             <Typography paragraph ><b>ID: </b>{result.id}</Typography>
             <Typography paragraph ><b>Location: </b>{result.location}</Typography>
            {/* <Typography paragraph ><b>Followers: </b>{result.followers_url.length}</Typography>    
