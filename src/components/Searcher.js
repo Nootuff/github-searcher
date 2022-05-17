@@ -1,7 +1,7 @@
 import React from "react";
 import SearchForm from "./SearchForm";
 
-import ResultField from "./ResultField"; 
+import ResultField from "./ResultField";
 import useSearch from "../hooks/useSearch";
 import useInputState from "../hooks/useInputState";
 
@@ -24,27 +24,30 @@ function Searcher() {
   const [result, searched, handleSubmit] = useSearch();
   return (
     <div>
-    <Typography variant="h4" sx={{ mt: 4 }} >GitHub User Searcher</Typography>
+      <Typography variant="h4" sx={{ mt: 4 }} >GitHub User Searcher</Typography>
 
-      <SearchForm 
-      values={values}
-      handleChange={handleChange}
-      result = {result}
-      handleSubmit = {handleSubmit}
+      <SearchForm
+        values={values}
+        handleChange={handleChange}
+        result={result}
+        handleSubmit={handleSubmit}
       />
 
-{searched && <p>Searched once</p> }
+      {searched &&
 
-<ResultField 
-result = {result}
-/>
-{/*<ResultCard
+        <ResultField
+          result={result}
+        />
+        
+      }
+
+      {/*<ResultCard
 result = {result}
   />*/}
 
-<Typography variant="h6">
-             <Link href="https://github.com/Nootuff/github-searcher" target="_blank" rel="noopener">View site code on GitHub</Link>
-                </Typography>
+      <Typography variant="h6">
+        <Link href="https://github.com/Nootuff/github-searcher" target="_blank" rel="noopener">View site code on GitHub</Link>
+      </Typography>
     </div>
   )
 }
