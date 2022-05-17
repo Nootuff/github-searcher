@@ -13,9 +13,9 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 
 
-function SearchForm({ values, handleChange, result, handleSubmit }) {
+function SearchForm({ values, handleChange,  handleSubmit }) {
   return (
-    <Paper>
+    <Paper sx={{ p: 3 }} >
     <form>
       <TextField
       sx={{ my: 2 }} 

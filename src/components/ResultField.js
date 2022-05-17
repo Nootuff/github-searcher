@@ -4,13 +4,13 @@ import NoResult from "./NoResult";
 
 import Box from '@mui/material/Box';
 
-function ResultField({ result, searchTerm /*values, handleChange, result, handleSubmit*/ }) {
+function ResultField({ user, repos, searchTerm /*values, handleChange, result, handleSubmit*/ }) {
   return (
     <Box>
-      ResultField
-      {result ? 
+      {user ? 
       <ResultCard
-        result={result}
+      user={user}
+      repos={repos}
       />
 :
       <NoResult

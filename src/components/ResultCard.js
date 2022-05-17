@@ -1,5 +1,8 @@
 
 import React from "react";
+
+import RepoCard from "./RepoCard";
+
 /*import TextField from '@mui/material/TextField';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -16,7 +19,17 @@ import CardContent from "@mui/material/CardContent";
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
-function ResultCard({ result/* values, handleChange, result, handleSubmit */ }) {
+function ResultCard({ user, repos/* values, handleChange, result, handleSubmit */ }) {
+
+  const repoList = repos.map((repo) =>
+  <RepoCard
+  key={repo.id}
+   repo={repo}
+
+   />
+/*<li>{repo.name}</li>*/
+ );
+
   return (
     <Card
     className="Result-card"
@@ -29,21 +42,26 @@ function ResultCard({ result/* values, handleChange, result, handleSubmit */ }) 
             <CardMedia
             sx={{ width: 1/4 }}
             component="img"
-            image={result.avatar_url}
+            image={user.avatar_url}
             alt="Profile image here"
             ></CardMedia>
              <Typography variant="h4">
-             <Link href={result.html_url} target="_blank" rel="noopener">{result.login}</Link>
+             <Link href={user.html_url} target="_blank" rel="noopener">{user.login}</Link>
                 </Typography>
                 
-             <Typography paragraph ><b>ID: </b>{result.id}</Typography>
-             {result.location && <Typography paragraph ><b>Location: </b>{result.location}</Typography> }
-             {result.twitter_username && <Typography paragraph>
-             <Link href={`https://twitter.com/${result.twitter_username}`} underline="hover" target="_blank" rel="noopener">Twitter</Link> 
+             <Typography paragraph ><b>ID: </b>{user.id}</Typography>
+             {user.location && <Typography paragraph ><b>Location: </b>{user.location}</Typography> }
+             {user.twitter_username && <Typography paragraph>
+             <Link href={`https://twitter.com/${user.twitter_username}`} underline="hover" target="_blank" rel="noopener">Twitter</Link> 
                 </Typography> }
            {/* <Typography paragraph ><b>Followers: </b>{result.followers_url.length}</Typography>    
             <Typography paragraph ><b>Following: </b>{result.following_url.length}</Typography>    If you can't get it working abandon this part */}
-            {result.bio && <Typography paragraph><b>Bio: </b>{result.bio}</Typography> }
+            {user.bio && <Typography paragraph><b>Bio: </b>{user.bio}</Typography> }
+
+            {repos.length && <Typography paragraph><b>Repos: </b></Typography> }
+ 
+{repoList}
+ 
 
             {/* <Typography paragraph ><b>Location: </b>{result.repos_url}</Typography> */}
           </div>

@@ -4,6 +4,7 @@ import SearchForm from "./SearchForm";
 import ResultField from "./ResultField";
 import useSearch from "../hooks/useSearch";
 import useInputState from "../hooks/useInputState";
+import '../styles/Searcher.css';
 
 
 /*import TextField from '@mui/material/TextField';
@@ -17,26 +18,40 @@ import Typography from '@mui/material/Typography';
 import '../styles/SearchForm.css';*/
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import Box from '@mui/material/Box';
+
+
+
+
 
 function Searcher() {
   const [values, /* searchTermHolder,*/ handleChange] = useInputState();
 
-  const [result, searched, searchTerm, handleSubmit] = useSearch();
+  const [user, repos, searched, searchTerm, handleSubmit] = useSearch();
   return (
-    <div>
+    <Box
+    id="Searcher"
+    >
+      <section id="Searcher-header">
       <Typography variant="h4" sx={{ mt: 4 }} >GitHub User Searcher</Typography>
 
+      <Typography variant="h6" sx={{ my: 2 }} > By Adam Walker </Typography>
+
+      <Typography variant="h6" sx={{ mb: 2 }} >
+        <Link href="https://github.com/Nootuff/github-searcher" target="_blank" rel="noopener">View site code on GitHub</Link>
+      </Typography>
+      </section>
       <SearchForm
         values={values}
         handleChange={handleChange}
-        result={result}
         handleSubmit={handleSubmit}
       />
 
       {searched &&
 
         <ResultField
-          result={result}
+        user={user}
+        repos={repos}
           searchTerm={searchTerm}
         />
 
@@ -46,10 +61,8 @@ function Searcher() {
 result = {result}
   />*/}
 
-      <Typography variant="h6">
-        <Link href="https://github.com/Nootuff/github-searcher" target="_blank" rel="noopener">View site code on GitHub</Link>
-      </Typography>
-    </div>
+      
+    </Box>
   )
 }
 

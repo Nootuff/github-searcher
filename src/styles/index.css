@@ -5,6 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--github-grey);
+  height: 100%;
+}
+
+:root {
+  --github-grey: #0d1117;
+  
 }
 
 code {
