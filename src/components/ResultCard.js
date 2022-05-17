@@ -1,19 +1,6 @@
-
 import React from "react";
-
 import RepoCard from "./RepoCard";
-
-/*import TextField from '@mui/material/TextField';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import Paper from '@mui/material/Paper'
-import Button from '@mui/material/Button';
-
-import '../styles/SearchForm.css'; */
 import Card from "@mui/material/Card";
-import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from '@mui/material/Typography';
@@ -24,7 +11,7 @@ import { grey } from '@mui/material/colors';
 
 const border = grey[700];
 
-function ResultCard({ user, repos/* values, handleChange, result, handleSubmit */ }) {
+function ResultCard({ user, repos}) {
 
   const repoList = repos.map((repo) =>
     <RepoCard
@@ -58,11 +45,11 @@ function ResultCard({ user, repos/* values, handleChange, result, handleSubmit *
         {user.location && <Typography paragraph ><b>Location: </b>{user.location}</Typography>}
 
         {user.twitter_username && <Typography paragraph>
-          <Link href={`https://twitter.com/${user.twitter_username}`} underline="hover" target="_blank" rel="noopener">Twitter</Link>
+          <Link href={`https://twitter.com/${user.twitter_username}`} underline="hover" target="_blank" rel="noopener"><b>Twitter</b></Link>
         </Typography>}
 
         {user.blog && <Typography paragraph>
-          <Link href={user.blog} underline="hover" target="_blank" rel="noopener">Personal site</Link>
+          <Link href={user.blog} underline="hover" target="_blank" rel="noopener"><b>Personal site</b></Link>
         </Typography>}
 
         {user.bio && <Typography paragraph><b>Bio: </b>{user.bio}</Typography>}

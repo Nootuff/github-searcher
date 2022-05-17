@@ -24,7 +24,7 @@ function Searcher() {
           <Link href="https://github.com/Nootuff/github-searcher" target="_blank" rel="noopener">View site code on GitHub</Link>
         </Typography>
       </section>
-      
+
       <SearchForm
         values={values}
         handleChange={handleChange}
@@ -32,15 +32,13 @@ function Searcher() {
       />
 
       {loading ? <Loading /> : null}
-
+      
       {searched &&
-
         <ResultField
           user={user}
           repos={repos}
           searchTerm={searchTerm}
         />
-
       }
 
     </Box>

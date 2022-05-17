@@ -1,14 +1,11 @@
 import Card from "@mui/material/Card";
-import CardHeader from "@mui/material/CardHeader";
 import Link from '@mui/material/Link';
-
 import CardContent from "@mui/material/CardContent";
 import Typography from '@mui/material/Typography';
 
 function RepoCard({ repo }) {
 
-  const createdRaw = repo.created_at; //'2021-10-20T07:49:38Z'; 
-
+  const createdRaw = repo.created_at;
   const createdMod = createdRaw.slice(0, -10).split('-').reverse().join('/');
 
   return (
@@ -18,7 +15,7 @@ function RepoCard({ repo }) {
       sx={{ mb: 2 }}
     >
       <CardContent align="left">
-        <Typography paragraph ><Link href={repo.html_url} target="_blank" rel="noopener" >{repo.name}</Link></Typography>
+        <Typography paragraph ><Link href={repo.html_url} target="_blank" rel="noopener">{repo.name}</Link></Typography>
         <Typography paragraph><b>Created:</b> {createdMod}</Typography>
         {repo.description && <Typography paragraph><b>Description:</b> {repo.description}</Typography>}
       </CardContent>

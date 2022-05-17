@@ -9,11 +9,12 @@ Handle errors or users not found by displaying a suitable message.
 *	the result card should be not shown to begin with. DONE
 *	Error message if nothing found. If possible make the error message a component. DONE
 * 	If no data is there, don't make card render DONE
-*	Result card should have a list of their repos, functioning urls, render these as cards with dropdown
+*	Result card should have a list of their repos, functioning urls, render these as cards DONE
 *	Have a link to their twitter, use string template interpolation. DONE
 * 	Image is too small, make it larger. DONE
 * 	Data fields should only render if that data is on the user profile. User ternary operator. DONE
 *  	Can you have a loader? DONE
 * 	Can you get a live demo working on netlify? DONE
+* 	Find a way to use pagination to render all repos. 
 
 * 	Use mui to style, if there is time left DONE
