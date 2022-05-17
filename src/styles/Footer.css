@@ -1,0 +1,33 @@
+.Footer {
+  height: 100px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.Footer-text {
+  font-size: 13px!important;
+}
+
+.Footer-item:not(:first-child) {
+  border-left: 1px solid white;
+}
+  
+nav table {
+  margin: auto;
+}
+  
+nav td {
+  color: var(--white-color);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .Footer-text  {
+    font-size: 15px!important;
+  }  
+}

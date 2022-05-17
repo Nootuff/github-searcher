@@ -7,36 +7,36 @@ import { grey } from '@mui/material/colors';
 
 const border = grey[700];
 
-
-function SearchForm({ values, handleChange,  handleSubmit }) {
+function SearchForm({ values, handleChange, handleSubmit }) {
   return (
     <Paper sx={{ p: 3, border: 4, borderColor: border }} >
-    <FormControl>
-      <TextField
-      sx={{ my: 2 }} 
-        type="text"
-        id="search-input"
-        value={values.searchTerm}
-        onChange={handleChange}
-        name="searchTerm"
-        variant="outlined"
-        label="Enter GitHub User"
-        required
-      >
+      <FormControl>
+        <TextField
+          sx={{ my: 2 }}
+          type="text"
+          id="search-input"
+          value={values.searchTerm}
+          onChange={handleChange}
+          name="searchTerm"
+          variant="outlined"
+          label="Enter GitHub User"
+          required
+        >
+        </TextField>
 
-      </TextField>
-      <br />
-      <Button 
-      
-         variant={(values.searchTerm === "" ) ? "disabled" : "contained"/*If no searchTerm has been entered or searchBy selected, button is disabled.*/}
-           onClick={(event) => {
+        <br />
+
+        <Button
+          variant={(values.searchTerm === "") ? "disabled" : "contained"/*If no searchTerm has been entered or searchBy selected, button is disabled.*/}
+          onClick={(event) => {
             event.preventDefault();
             handleSubmit(values /* props.searchByHolder, props.searchTermHolder*/);
-           }}
-      >
-        Search by username
-      </Button>
-    </FormControl>
+          }}
+        >
+          Search by username
+        </Button>
+        
+      </FormControl>
     </Paper>
   )
 }

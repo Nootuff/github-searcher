@@ -1,6 +1,7 @@
 #Searcher{
   width: 70%;
   margin: auto;
+  min-height: 80vh;
 }
 
 #Searcher-header{
