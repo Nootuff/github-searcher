@@ -36,16 +36,16 @@ function ResultCard({ result/* values, handleChange, result, handleSubmit */ }) 
              <Link href={result.html_url} target="_blank" rel="noopener">{result.login}</Link>
                 </Typography>
                 
-            <Typography paragraph ><b>ID: </b>{result.id}</Typography>
-            <Typography paragraph ><b>Location: </b>{result.location}</Typography>
-            <Typography paragraph>
+             <Typography paragraph ><b>ID: </b>{result.id}</Typography>
+             {result.location && <Typography paragraph ><b>Location: </b>{result.location}</Typography> }
+             {result.twitter_username && <Typography paragraph>
              <Link href={`https://twitter.com/${result.twitter_username}`} underline="hover" target="_blank" rel="noopener">Twitter</Link> 
-                </Typography>
+                </Typography> }
            {/* <Typography paragraph ><b>Followers: </b>{result.followers_url.length}</Typography>    
             <Typography paragraph ><b>Following: </b>{result.following_url.length}</Typography>    If you can't get it working abandon this part */}
-            <Typography paragraph><b>Bio: </b>{result.bio}</Typography>
+            {result.bio && <Typography paragraph><b>Bio: </b>{result.bio}</Typography> }
 
-
+            {/* <Typography paragraph ><b>Location: </b>{result.repos_url}</Typography> */}
           </div>
          {/* :
           <Typography paragraph>Sorry nothing found</Typography>

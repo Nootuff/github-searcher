@@ -23,8 +23,8 @@ export default search => {
             method: 'GET',
             url: `https://api.github.com/users/${values.searchTerm}`,
         };
-//alert("Activate search")
-//setResult("Testing does this worK? ")
+//Could have a second search using string template above to search `https://api.github.com/users/${values.searchTerm}/repos` send the dataset under something else?
+
 console.log(values.searchTerm)
 
 
@@ -36,7 +36,6 @@ if (values.searchTerm !== ""){
 
   return axios.request(options).then(function (response) { //Response is the argument to hold the actual returned results from the axios.request.
     setResult(response.data); //The results of the axios reqeust is set to state.
-    //setSearchTags({ searchedTerm: valuesParam.searchTerm, searchedBy: valuesParam.searchBy }); //The search term and search by are saved to the searchTags to be used in the result message. 
     console.log(response.data)
     
 }).catch(function (error){
