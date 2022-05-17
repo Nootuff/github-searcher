@@ -24,7 +24,7 @@ function ResultCard({ result/* values, handleChange, result, handleSubmit */ }) 
      sx={{ width: '50%' }} align="center" >
 
       <CardContent align="left">
-        {result ?
+        
           <div>
             <CardMedia
             sx={{ width: 1/4 }}
@@ -46,9 +46,9 @@ function ResultCard({ result/* values, handleChange, result, handleSubmit */ }) 
 
 
           </div>
-          :
+         {/* :
           <Typography paragraph>Sorry nothing found</Typography>
-        }
+        } */}
       </CardContent>
     </Card>
   )

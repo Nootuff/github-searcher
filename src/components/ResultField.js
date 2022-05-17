@@ -1,16 +1,24 @@
-import Box from '@mui/material/Box';
-import ResultCard from "./ResultCard";    
+import ResultCard from "./ResultCard";
 
-function ResultField({ result /*values, handleChange, result, handleSubmit*/ }) {
+import NoResult from "./NoResult";
+
+import Box from '@mui/material/Box';
+
+function ResultField({ result, searchTerm /*values, handleChange, result, handleSubmit*/ }) {
   return (
     <Box>
-ResultField
+      ResultField
+      {result ? 
+      <ResultCard
+        result={result}
+      />
+:
+      <NoResult
+searchTerm={searchTerm}
+      />
+}
 
-<ResultCard
-result = {result}
-  />
-
-</Box>
+    </Box>
   )
 }
 

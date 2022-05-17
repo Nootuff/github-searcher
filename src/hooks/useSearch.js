@@ -9,13 +9,13 @@ const initialSearchTags = {
 export default search => {
     const [result, setResult] = useState("");
     const [searched, setSearched] = useState(false);
-    //const [searchTags, setSearchTags] = useState(initialSearchTags);
+    const [searchTerm, setSearchTerm] = useState("");
    // const [show, setShow] = useState(false);
     //const [loading, setLoading] = useState(false);
 
   //  const apiHolder = process.env.REACT_APP_RAPIDAPI_KEY;
 
-    const handleSubmit = (values, searchByParam, searchTermParam) => { //Activates on form submission, the parameters are being passed in all the way from useInputState where they were set by handleChangeFunc and passed back to WorkoutApp.
+    const handleSubmit = (values) => { //Activates on form submission, the parameters are being passed in all the way from useInputState where they were set by handleChangeFunc and passed back to WorkoutApp.
 
  
 
@@ -27,7 +27,10 @@ export default search => {
 //setResult("Testing does this worK? ")
 console.log(values.searchTerm)
 
+
+
 setSearched(true)
+setSearchTerm(values.searchTerm)
 
 if (values.searchTerm !== ""){
 
@@ -62,5 +65,5 @@ if (values.searchTerm !== ""){
         */
     }
 
-    return [result, searched, /* searchTags, */   handleSubmit ];
+    return [result, searched, searchTerm, handleSubmit ];
 }

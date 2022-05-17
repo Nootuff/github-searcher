@@ -21,7 +21,7 @@ import Link from '@mui/material/Link';
 function Searcher() {
   const [values, /* searchTermHolder,*/ handleChange] = useInputState();
 
-  const [result, searched, handleSubmit] = useSearch();
+  const [result, searched, searchTerm, handleSubmit] = useSearch();
   return (
     <div>
       <Typography variant="h4" sx={{ mt: 4 }} >GitHub User Searcher</Typography>
@@ -37,8 +37,9 @@ function Searcher() {
 
         <ResultField
           result={result}
+          searchTerm={searchTerm}
         />
-        
+
       }
 
       {/*<ResultCard
