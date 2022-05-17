@@ -18,6 +18,8 @@ import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import '../styles/ResultCard.css';
+import "../styles/index.css";
 
 function ResultCard({ user, repos/* values, handleChange, result, handleSubmit */ }) {
 
@@ -32,15 +34,15 @@ function ResultCard({ user, repos/* values, handleChange, result, handleSubmit *
 
   return (
     <Card
-    className="Result-card"
+    id="Result-card"
     raised
-     sx={{ width: '50%' }} align="center" >
+    >
 
       <CardContent align="left">
         
-          <div>
+           
             <CardMedia
-            sx={{ width: 1/4 }}
+            sx={{ width: 2/4 }}
             component="img"
             image={user.avatar_url}
             alt="Profile image here"
@@ -64,7 +66,7 @@ function ResultCard({ user, repos/* values, handleChange, result, handleSubmit *
  
 
             {/* <Typography paragraph ><b>Location: </b>{result.repos_url}</Typography> */}
-          </div>
+          
          {/* :
           <Typography paragraph>Sorry nothing found</Typography>
         } */}

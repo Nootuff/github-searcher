@@ -1,0 +1,8 @@
+#Result-card{
+  border: 7px solid var(--lighter-grey);;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 17px auto;
+  width: 50%;
+}

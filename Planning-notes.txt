@@ -11,8 +11,8 @@ Handle errors or users not found by displaying a suitable message.
 * 	If no data is there, don't make card render DONE
 *	Result card should have a list of their repos, functioning urls, render these as cards with dropdown
 *	Have a link to their twitter, use string template interpolation. DONE
-* 	Image is too small, make it larger. 
-* 	Data fields should only render if that data is on the user profile. User ternary operator. 
+* 	Image is too small, make it larger. DONE
+* 	Data fields should only render if that data is on the user profile. User ternary operator. DONE
 • 	
 •	Can you get a live demo working on netlify? DONE
 
