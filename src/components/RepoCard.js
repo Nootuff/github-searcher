@@ -5,8 +5,7 @@ import Typography from '@mui/material/Typography';
 
 function RepoCard({ repo }) {
 
-  const createdRaw = repo.created_at;
-  const createdMod = createdRaw.slice(0, -10).split('-').reverse().join('/');
+  const createdMod = repo.created_at.slice(0, -10).split('-').reverse().join('/');
 
   return (
     <Card
