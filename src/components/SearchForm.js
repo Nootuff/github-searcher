@@ -23,20 +23,17 @@ function SearchForm({ values, handleChange, handleSubmit, setPage }) {
           required
         >
         </TextField>
-
         <br />
-
         <Button
           variant={(values.searchTerm === "") ? "disabled" : "contained"/*If no searchTerm has been entered or searchBy selected, button is disabled.*/}
           onClick={(event) => {
             event.preventDefault();
             handleSubmit(values);
-            setPage(1);
+            setPage(1); //So page number is not retained between searches.
           }}
         >
           Search by username
         </Button>
-        
       </FormControl>
     </Paper>
   )

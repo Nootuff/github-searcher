@@ -13,7 +13,7 @@ import '../styles/Searcher.css';
 
 function Searcher() {
   const [values, handleChange] = useInputState();
-  const [user, repos, searched, searchTerm, loading, handleSubmit] = useSearch();
+  const [user, repos, show, searchTerm, loading, handleSubmit] = useSearch();
   const [itemsPerPage] = useState(10); //Sets number of items that can appear on each page.
   const [page, setPage] = React.useState(1);
 
@@ -33,26 +33,24 @@ function Searcher() {
           handleSubmit={handleSubmit}
           setPage={setPage}
         />
-
         {loading ? <Loading /> : null}
-
-        {searched &&
+        {show &&
           <Box>
             <ResultField
               user={user}
               repos={currentRepos}
               searchTerm={searchTerm}
             />
-            {user &&
-            <Pagination
-              itemsPerPage={itemsPerPage}
-              totalItems={repos.length}
-              page={page}
-              setPage={setPage} />
+            {user && //Repo pagination will not appear if no user has been found.
+              <Pagination
+                itemsPerPage={itemsPerPage}
+                totalItems={repos.length}
+                page={page}
+                setPage={setPage}
+              />
             }
           </Box>
         }
-
       </Box>
       <Footer />
     </Container>

@@ -15,7 +15,7 @@ function DataPagination({ itemsPerPage, totalItems, page, setPage }) {
       count={pageNumbers.length}
       page={page}
       onChange={(event, value) => { setPage(value); }}
-      variant="outlined"
+      color="primary"
       sx={{ justifyContent: "center", display: 'flex', m: "40px 0 30px 0", p: 1, bgcolor: bgColor, borderRadius: 1 }}
     />
   );

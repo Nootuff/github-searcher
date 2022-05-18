@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Comforter&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
 #Header {
   width: 100%;
@@ -7,8 +7,12 @@
 }
 
 #Header-logo{
-  font-family: 'Black Ops One', cursive;
+  font-family: 'Kanit', sans-serif;
   font-size: 20px;
+}
+
+#Header-icon{
+margin-bottom: -2px;
 }
 
 @media only screen and (min-width: 768px) {

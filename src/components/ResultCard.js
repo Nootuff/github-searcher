@@ -49,7 +49,7 @@ function ResultCard({ user, repos }) {
 
         {user.bio && <Typography paragraph><b>Bio: </b>{user.bio}</Typography>}
 
-        {repos.length && <Typography paragraph><b>Code Repos: </b></Typography>}
+        {repos.length && <Typography paragraph><b>Code repos: </b></Typography>}
 
         {repoList}
 
