@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import CopyrightIcon from '@mui/icons-material/Copyright';
 import Link from '@mui/material/Link';
-import '../styles/Footer.css';
+import '../../styles/Footer.css';
 
 function Footer() {
   return (

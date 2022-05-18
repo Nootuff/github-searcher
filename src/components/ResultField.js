@@ -1,4 +1,4 @@
-import ResultCard from "./ResultCard";
+import ResultCard from "./cards/ResultCard";
 import NoResult from "./NoResult";
 import Container from '@mui/material/Container';
 

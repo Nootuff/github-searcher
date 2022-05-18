@@ -5,8 +5,8 @@ import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
-import '../styles/ResultCard.css';
-import "../styles/index.css";
+import '../../styles/ResultCard.css';
+import "../../styles/index.css";
 
 function ResultCard({ user, repos }) {
 
