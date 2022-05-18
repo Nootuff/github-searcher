@@ -1,5 +1,12 @@
 #Result-card {
   margin: 17px auto 50px;
-  width: 50%;
+  width: 90%;
   color: var(--github-grey)
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  #Result-card  {
+    width: 55%;
+  }  
 }

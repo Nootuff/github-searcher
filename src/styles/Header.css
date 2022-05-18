@@ -8,4 +8,12 @@
 
 #Header-logo{
   font-family: 'Black Ops One', cursive;
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  #Header-logo  {
+    font-size: 37px;
+  }  
 }

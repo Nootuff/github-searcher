@@ -16,6 +16,7 @@ Handle errors or users not found by displaying a suitable message.
 *  	Can you have a loader? DONE
 * 	Can you get a live demo working on netlify? DONE
 * 	Find a way to use pagination to render all repos. 
-*	Footer?
+*	Footer? DONE
+*	Can you make it responsive?
 
 * 	Use mui to style, if there is time left DONE

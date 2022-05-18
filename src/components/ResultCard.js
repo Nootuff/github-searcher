@@ -24,7 +24,7 @@ function ResultCard({ user, repos}) {
     <Card
       id="Result-card"
       raised
-      sx={{ p: 3, border: 4, borderColor: border }}
+      sx={{ p: 2, border: 4, borderColor: border }}
     >
       <CardContent align="left">
 

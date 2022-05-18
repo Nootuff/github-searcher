@@ -27,7 +27,7 @@ export default search => {
 
           setSearched(true); //ResultField can now be rendered.
 
-          return axios.get(`https://api.github.com/users/${values.searchTerm}/repos?per_page=100`); //Second request made for users' repos, absolute maximum results  that can be returned on a page for a search is 100.
+          return axios.get(`https://api.github.com/users/${values.searchTerm}/repos?per_page=100`); //Second request made for users' repos, absolute maximum results that can be returned on a page for a search is 100.
 
         }).then(function (response) {
 
