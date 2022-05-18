@@ -7,11 +7,8 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import '../styles/ResultCard.css';
 import "../styles/index.css";
-import { grey } from '@mui/material/colors';
 
-const border = grey[700];
-
-function ResultCard({ user, repos}) {
+function ResultCard({ user, repos }) {
 
   const repoList = repos.map((repo) =>
     <RepoCard
@@ -24,10 +21,8 @@ function ResultCard({ user, repos}) {
     <Card
       id="Result-card"
       raised
-      sx={{ p: 2, border: 4, borderColor: border  }}
     >
       <CardContent align="left">
-
         <CardMedia
           sx={{ width: 2 / 4 }}
           component="img"

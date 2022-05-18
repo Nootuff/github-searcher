@@ -7,7 +7,7 @@ import { grey } from '@mui/material/colors';
 
 const border = grey[700];
 
-function SearchForm({ values, handleChange, handleSubmit }) {
+function SearchForm({ values, handleChange, handleSubmit, setPage }) {
   return (
     <Paper sx={{ p: 3, border: 4, borderColor: border }} >
       <FormControl>
@@ -30,7 +30,8 @@ function SearchForm({ values, handleChange, handleSubmit }) {
           variant={(values.searchTerm === "") ? "disabled" : "contained"/*If no searchTerm has been entered or searchBy selected, button is disabled.*/}
           onClick={(event) => {
             event.preventDefault();
-            handleSubmit(values /* props.searchByHolder, props.searchTermHolder*/);
+            handleSubmit(values);
+            setPage(1);
           }}
         >
           Search by username

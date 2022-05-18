@@ -31,6 +31,7 @@ function Searcher() {
           values={values}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
+          setPage={setPage}
         />
 
         {loading ? <Loading /> : null}
@@ -42,11 +43,13 @@ function Searcher() {
               repos={currentRepos}
               searchTerm={searchTerm}
             />
+            {user &&
             <Pagination
               itemsPerPage={itemsPerPage}
               totalItems={repos.length}
               page={page}
               setPage={setPage} />
+            }
           </Box>
         }
 

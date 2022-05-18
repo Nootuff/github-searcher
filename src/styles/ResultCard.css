@@ -1,12 +1,15 @@
 #Result-card {
-  margin: 17px auto 50px; 
-  width: 90%;
-  color: var(--github-grey)
+  margin: 17px 0px 50px;
+  width: 100%;
+  color: var(--github-grey);
+  border: 4px solid #616161;
+  box-sizing: border-box;
 }
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
-  #Result-card  {
+  #Result-card {
     width: 55%;
-  }  
+    margin: 17px auto 50px;
+  }
 }
