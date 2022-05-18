@@ -21,7 +21,7 @@ function Searcher() {
 
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
 
-  const currentResults = repos.slice(indexOfFirstItem, indexOfLastItem);
+  const currentRepos = repos.slice(indexOfFirstItem, indexOfLastItem);
 
   return (
     <Container>
@@ -39,18 +39,18 @@ function Searcher() {
           <Box>
             <ResultField
               user={user}
-              repos={repos}
+              repos={currentRepos}
               searchTerm={searchTerm}
-
-              itemsPerPage={itemsPerPage} 
-               page={page} 
-               setPage={setPage}
             />
+            <Pagination
+              itemsPerPage={itemsPerPage}
+              totalItems={repos.length}
+              page={page}
+              setPage={setPage} />
           </Box>
         }
 
       </Box>
-
       <Footer />
     </Container>
   )

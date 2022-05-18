@@ -15,7 +15,7 @@ Handle errors or users not found by displaying a suitable message.
 * 	Data fields should only render if that data is on the user profile. User ternary operator. DONE
 *  	Can you have a loader? DONE
 * 	Can you get a live demo working on netlify? DONE
-* 	Find a way to use pagination . 
+* 	Find a way to use pagination . DONE
 *	Footer? DONE
 *	Can you make it responsive? DONE
 
